@@ -1,0 +1,459 @@
+@font-face {
+  font-family: montserrat;
+  src: url(fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: montserrat-light;
+  src: url(fonts/montserrat/Montserrat-Light.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: montserrat, sans-serif;
+}
+
+.container {
+  display: grid;
+  row-gap: 2em;
+}
+
+#header {
+  background-color: #ffdbcc;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  padding: 2em 0 2em 0;
+}
+
+.header-img {
+  height: 15em;
+  width: 100%;
+  background-image: url(images/ey-transparent-1500x1500.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 0 2em 0;
+}
+
+.header-nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10em;
+}
+
+.header-nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  border-bottom: solid black 1px;
+  transition: color 0.5s ease, border-bottom 0.5s ease;
+  font-family: montserrat;
+}
+
+.header-nav-item:hover {
+  color: white;
+  border-bottom-color: transparent;
+}
+
+#about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.headshot-img-background {
+  background-image:url(images/headshot.jpg);
+  height: 50em;
+  width: 100%;
+  margin: 0 0 0 2em;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.description-wrapper {
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.paragraph {
+  line-height: 1.6em;
+}
+
+.description-text {
+  display: grid;
+  padding: 0 2em;
+  row-gap: 1em;
+}
+
+.floating-header-text {
+  font-size: 4em;
+  background-color: #ffdbcc;
+  position: absolute;
+  right: 4em;
+  font-family: montserrat-light;
+  text-transform: uppercase;
+  border: solid white .1em;
+  border-radius: 2px;
+  padding: .5em 1em;
+  letter-spacing: .05em;
+  text-align: center;
+}
+
+#experience {
+  display: grid;
+  row-gap: 1em;
+}
+
+.experience-sub-section {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.inverted {
+  grid-template-columns: 2fr 3fr;
+}
+
+.experience-description-wrapper {
+  background-color: #ffdbcc;
+  padding: 3em 5em;
+}
+
+.experience-sub-header {
+  text-transform: uppercase;
+  font-family: montserrat;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 0.5em;
+}
+
+.experience-company a {
+  text-decoration: none;
+  font-size: 2em;
+  color: black;
+  border-bottom: solid black 1px;
+  transition: color 0.5s ease, border-bottom 0.5s ease;
+}
+
+.experience-company a:hover {
+  color: white;
+  border-bottom-color: transparent;
+}
+
+.experience-date-place {
+  font-family: montserrat-light;
+}
+
+.experience-role-description {
+  font-family: montserrat;
+}
+
+.experience-logo-wrapper {
+  transition: filter 1s ease-in-out;
+  filter: grayscale(100%) opacity(40%);
+  padding: 4em;
+}
+
+.experience-logo-wrapper:hover {
+  filter: grayscale(0%);
+}
+
+.experience-logo-img {
+  background-color: white;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: auto;
+}
+
+#skills {
+  display: grid;
+}
+
+.icons {
+  list-style: none;
+  display: grid;
+  font-size: 7em;
+  text-align: center;
+  grid-template-columns: repeat(4, minmax(8rem, 1fr));
+  grid-auto-rows: 1fr;
+  row-gap: .3em;
+}
+
+.icons div {
+  padding: .5em;
+  background-color: #ffdbcc;
+  padding: .4em;
+  justify-self: center;
+  border-radius: 2px;
+}
+
+.section-header-text {
+  text-align: center;
+  font-size: 4em;
+  font-family: montserrat-light;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .5em .5em;
+}
+
+@media screen and (max-width: 1680px) {
+  #header {
+    padding: 3em 0 3em 0;
+    background-attachment: scroll;
+  }
+
+  .description-wrapper {
+    grid-template-rows: 1fr 3fr;
+  }
+
+  .floating-header-text {
+    right: 7em;
+  }
+
+  .description-text {
+    padding: 0 9em;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  #header {
+    padding: 3em 0 3em 0;
+    background-attachment: scroll;
+  }
+
+  .floating-header-text {
+    right: 5em;
+  }
+
+  .description-text {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #header {
+    padding: 2em 0 2em 0;
+    background-attachment: scroll;
+  }
+
+  .floating-header-text {
+    right: 3em;
+  }
+
+  .description-text {
+    padding: 0 4em;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  #header {
+    padding: 2em 0 2em 0;
+    background-attachment: scroll;
+  }
+
+  .description-wrapper {
+    grid-template-rows: 1fr 4fr;
+  }
+
+  .floating-header-text {
+    font-size: 3em;
+    padding: .5em .5em;
+    right: 5em;
+  }
+
+  .description-text {
+    padding: 0 2em;
+  }
+
+  .section-header-text {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    overflow-x: hidden;
+  }
+
+  .header-img {
+    height: 10em;
+  }
+
+  #about-me {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .headshot-img-background {
+    height: 400px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .description-wrapper {
+    grid-template-rows: auto;
+    padding: 0 6em;
+  }
+
+  .description-text {
+    row-gap: 2em;
+  }
+
+  .floating-header-text {
+    position: inherit;
+    font-size: 2em;
+    background-color: inherit;
+  }
+
+  .section-header-text {
+    font-size: 2em;
+  }
+
+  .experience-company a {
+    font-size: 1em;
+  }
+
+  .icons {
+    font-size: 4em;
+    padding: 0em 2em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-nav-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 7em;
+  }
+
+  .experience-sub-section {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-description-wrapper {
+    padding: 3em 8em;
+    grid-row: 2;
+  }
+
+  .experience-logo-wrapper {
+    grid-row: 1;
+    padding: 1em 4em;
+  }
+
+  .experience-logo-img {
+    height: 150px;
+  }
+
+  .icons {
+    padding: 0 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-nav-wrapper {
+    padding: 0 5em;
+  }
+
+  .experience-logo-img {
+    height: 100px;
+  }
+
+  .icons {
+    padding: 0 0;
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-device-width: 945px) {
+  .container {
+    overflow-x: hidden;
+  }
+
+  .header-img {
+    height: 15em;
+  }
+
+  .header-nav-wrapper {
+    font-size: 1.5em;
+  }
+
+  #about-me {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .headshot-img-background {
+    height: 400px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .description-wrapper {
+    grid-template-rows: auto;
+    padding: 0 8em;
+  }
+
+  .description-text {
+    font-size: .7em;
+    row-gap: 2.5em;
+  }
+
+  .floating-header-text {
+    position: inherit;
+    font-size: 2em;
+    background-color: inherit;
+  }
+
+  .section-header-text {
+    font-size: 2em;
+  }
+
+  .experience-sub-section {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-company a {
+    font-size: 1em;
+  }
+
+  .experience-description-wrapper {
+    padding: 3em 8em;
+    grid-row: 2;
+  }
+
+  .experience-date-place {
+    font-size: .7em;
+  }
+
+  .experience-role-header {
+    font-size: .7em;
+  }
+
+  .experience-role-description {
+    font-size: .7em;
+  }
+
+  .experience-logo-wrapper {
+    grid-row: 1;
+    padding: 1em 4em;
+  }
+
+  .experience-logo-img {
+    height: 200px;
+  }
+
+  .icons {
+    padding: .5em 2em;
+    row-gap: .5em;
+    font-size: 4em;
+  }
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .experience-logo-wrapper:hover {
+    filter: grayscale(0%);
+  }
+}
